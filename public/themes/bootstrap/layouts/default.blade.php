@@ -7,6 +7,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="keywords" content="{{ Theme::get('keywords') }}">
         <meta name="description" content="{{ Theme::get('description') }}">
+        <script>
+            // A handy global js variable to be used anywhere. Points to the root of your app.
+            var baseUrl = '{{ URL::to('/') }}';
+
+            // A global js object
+            var app = app || {vars: {}};
+
+            // Put the variables set from the controller as a json object inside the app object
+            app.vars = {{ json_encode(AppHelper::getJsVars()); }};
+        </script>
         {{ Theme::asset()->styles() }}
         {{ Theme::asset()->scripts() }}
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
