@@ -1,25 +1,21 @@
-## Laravel PHP Framework
+*This is a work in progress. Not ready to use as yet.*
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/downloads.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+# Laravel 4 Bootstrap Application
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, and caching.
+This is a bootstrap application using [Laravel 4](http://laravel.com) to help you get started with your project quickly
 
-Laravel aims to make the development process a pleasing one for the developer without sacrificing application functionality. Happy developers make the best code. To this end, we've attempted to combine the very best of what we have seen in other web frameworks, including frameworks implemented in other languages, such as Ruby on Rails, ASP.NET MVC, and Sinatra.
+## Features
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+* Theming - uses [Theme for Laravel 4](https://github.com/teepluss/laravel4-theme)
+* A default theme built using Bootstrap 3
+* Ardent models - makes validation a breeze and hassle free
 
-## Official Documentation
 
-Documentation for the entire framework can be found on the [Laravel website](http://laravel.com/docs).
+## Installation
 
-### Contributing To Laravel
-
-**All issues and pull requests should be filed on the [laravel/framework](http://github.com/laravel/framework) repository.**
-
-### License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+* Clone or copy this repo to your webroot
+* Install [Composer](https://getcomposer.org/), if not already installed
+* Make the app storage (and all subdirectories) world writable
+* Run `composer.phar install` in the project root
+* Put your database credentials in `app/config/database.php` or you can create your [environment specific](http://laravel.com/docs/configuration#environment-configuration) `database.php` as well
+* Run `php artisan migrate`
