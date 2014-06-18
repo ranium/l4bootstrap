@@ -11,6 +11,8 @@ class HomeController extends BaseController {
 	 */
 	public function index()
 	{
+		// Set the title for this page
+		$this->theme->setTitle(trans('titles.home'));
 		return $this->theme->watch('home')->render();
 	}
 
