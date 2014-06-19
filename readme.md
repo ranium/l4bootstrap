@@ -41,3 +41,17 @@ AppHelper::setJsVar('foo', 'bar'); // 'bar' is the value to set and can be a str
 // In your JS code you can get the value set above like this
 alert(app.vars.foo);
 ````
+
+## Theming
+
+L4bootstrap uses the excellent [Theme package by @teeplus](https://github.com/teepluss/laravel4-theme). Please read its documentation to get a better understanding of how the theming works and different features/methods it offers.
+
+The theme files are stored in `public/themes/[themename]` directory. A default `bootstrap` theme is shipped with l4bootstrap.
+
+### Bootstrap theme structure
+
+To customize the default bootstrap theme, you can edit the following views/layotus/partials and create more as per your need.
+
+* Main layout - `public/themes/bootstrap/layouts/default.blade.php`
+* Navigation partial - `public/themes/bootstrap/partials/nav/main.blade.php`
+* Assets (js/css/fonts) - `public/themes/bootstrap/assets/`
