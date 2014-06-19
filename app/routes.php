@@ -13,3 +13,7 @@
 
 // Home page of the application
 Route::get('/', ['as' => 'home', 'uses' => 'HomeController@index']);
+
+// Route to static pages
+// The pages can have slugs as per the regex below. Feel free to change the regex as per your need.
+Route::get('/page/{page}', ['as' => 'page', 'uses' => 'PagesController@show'])->where(['page' => '[a-zA-Z0-9-_.]+']);

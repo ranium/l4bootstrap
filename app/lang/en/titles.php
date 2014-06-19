@@ -5,4 +5,5 @@
 return array(
   'home' => 'Welcome',
   'app_name' => 'Laravel 4 Bootstrap',
+  'about' => 'About Us',
 );
