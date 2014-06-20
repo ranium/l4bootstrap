@@ -9,6 +9,7 @@ This is a bootstrap application using [Laravel 4](http://laravel.com) to help yo
 * Theming - uses [Theme for Laravel 4](https://github.com/teepluss/laravel4-theme)
 * A default theme built using Bootstrap 3
 * Ardent models - makes validation a breeze and hassle free
+* Uses Laravel's localization feature (the default language files are in `app/lang/en/` direcotry)
 
 
 ## Installation
@@ -21,6 +22,18 @@ This is a bootstrap application using [Laravel 4](http://laravel.com) to help yo
 * Run `php artisan migrate`
 
 ## Goodies
+
+### Pages
+
+Its a breeze to create static pages. Just place your view in `app/views/pages/pagename.blade.php` and it will be available via `http://yourdomain.com/page/pagename` URL. The page uses the default layout of the theme.
+
+Feel free to make it work the way you want by editing the `PagesController`. You can even make the page content come from a database table and what not.
+
+The page title can be set from the page view by putting the following PHP code in the view
+
+````php
+Theme::setTitle('Your page title');
+````
 
 ### AppHelper class
 
