@@ -128,7 +128,22 @@ return array(
 		// Before all event, this event will effect for global.
 		'before' => function($theme)
 		{
-			//$theme->setTitle('Something in global.');
+			// Code to set the current nav item to active state
+			// Feel free to modify this as per your need
+			$currentPath = Request::path();
+
+			$navMappings = array(
+				'/' => 'home',
+				'page/about' => 'about',
+			);
+
+			$currentPage = '';
+
+			if (isset($navMappings[$currentPath])) {
+				$currentPage = $navMappings[$currentPath];
+			}
+
+			$theme->setCurrentPage($currentPage);
 		},
 
 		// This event will fire as a global you can add any assets you want here.
